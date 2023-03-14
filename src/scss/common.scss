@@ -1,0 +1,68 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.page {
+   // .page__start
+   &__start {
+   }
+   // .page__engage
+   &__engage {
+   }
+   // .page__various
+   &__various {
+   }
+   // .page__types
+   &__types {
+   }
+   // .page__interlingual
+   &__interlingual {
+   }
+   // .page__video-block
+   &__video-block {
+   }
+   // .page__line
+   &__line {
+   }
+   // .page__views
+   &__views {
+   }
+   // .page__hire
+   &__hire {
+   }
+   // .page__programs
+   &__programs {
+   }
+   // .page__quality
+   &__quality {
+   }
+   // .page__contacts
+   &__contacts {
+   }
+}
+// =======================================================================
+.title {
+   font-size: rem(36);
+   font-weight: 700;
+   line-height: math.div(42 , 36);
+   text-align: center;
+   @media (max-width:$tablet) {
+      font-weight: 900;
+      line-height: math.div(48 , 36);
+      letter-spacing: 0.03em;
+   }
+   &--card {
+      font-weight: 800;
+      font-size: rem(24);
+      text-transform: uppercase;
+      @media (max-width:$mobile) {
+         font-size: rem(27);
+      }
+   }
+}
+// =======================================================================
+.bold {
+   font-weight: 700;
+}
+// =======================================================================
+.text-card {
+   font-size: rem(24);
+}
+// =======================================================================

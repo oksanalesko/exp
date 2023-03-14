@@ -1,0 +1,108 @@
+//====================================================================================================
+.footer {
+   background-color: $mainColor;
+   @include adaptiveValue("padding-top", 108, 88);
+   @include adaptiveValue("padding-bottom", 108, 88);
+   // .footer__container
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width:$mobile) {
+         flex-direction: column;
+         row-gap: rem(70);
+      }
+   }
+   // .footer__block
+   &__block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width:$mobile) {
+         flex-direction: column-reverse;
+         row-gap: rem(75);
+      }
+   }
+   // .footer__logo
+   &__logo {
+      flex: 0 0 rem(300);
+      max-height: rem(85);
+      &:not(:last-child) {
+         @include adaptiveValue("margin-right", 207, 40, 0, 1170, 768);
+      }
+      @media (max-width:$mobile) {
+         &:not(:last-child) {
+            margin-right: 0;
+         }
+      }
+   }
+   // .footer__social
+   &__social {
+   }
+   // .footer__copy
+   &__copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media (max-width:$mobile) {
+         align-items: center;
+      }
+   }
+   &__block-copy {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 6, 34);
+      }
+   }
+   // .footer__copyright
+   &__copyright {
+      color: $whiteColor;
+      font-weight: 500;
+      line-height: 1.3;
+      &:not(:last-child) {
+         margin-bottom: rem(6);
+      }
+   }
+}
+.social {
+   color: $whiteColor;
+   font-size: rem(24);
+   display: flex;
+   gap: rem(20);
+   // .social__item
+   &__item {
+      color: $whiteColor;
+      &::before {
+         transition: color 0.5s ease;
+      }
+      @media (any-hover: hover) {
+         &:hover::before {
+            color: $orangeColor;
+            transition: color 0.5s ease;
+         }
+      }
+   }
+}
+.copy-block {
+   color: $whiteColor;
+   text-align: end;
+   &__link {
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: 1.3;
+      transition: color 0.5s ease;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $orangeColor;
+            transition: color 0.5s ease;
+         }
+      }
+      text-decoration: underline;
+      &:not(:last-child) {
+         margin-bottom: rem(6);
+      }
+   }
+   @media (max-width:$mobile) {
+      text-align: center;
+   }
+}
+//====================================================================================================

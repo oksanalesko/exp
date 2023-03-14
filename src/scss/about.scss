@@ -1,0 +1,417 @@
+// ===========================================================
+.views {
+   @include adaptiveValue("padding-top", 90, 44);
+   @include adaptiveValue("padding-bottom", 76, 50);
+   // .views__container
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      @include adaptiveValue("column-gap", 85, 20, 0, 1170, 992);
+      @media (max-width:$tablet) {
+         grid-template-columns: repeat(1, 1fr);
+         justify-items: center;
+      }
+   }
+   // .views__title
+   &__title {
+      @include adaptiveValue("font-size", 44, 38);
+      line-height: math.div(52 , 44);
+      font-weight: 800;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 80, 50);
+      }
+      @media (max-width:$tablet) {
+         text-align: center;
+      }
+      @media (max-width:$mobile) {
+         font-weight: 900;
+         line-height: math.div(50 , 38);
+      }
+   }
+   // .views__text
+   &__text {
+      align-self: start;
+      p:not(:last-child) {
+         margin-bottom: rem(50);
+      }
+   }
+   // .views__image
+   &__image {
+      img {
+         max-width: 100%;
+      }
+      grid-column: 2 / 3;
+      grid-row: 1 / span 2;
+      @media (max-width:$tablet) {
+         grid-column: 1 / 2;
+         grid-row: 2 / 3;
+         margin-bottom: rem(50);
+      }
+   }
+}
+// ===========================================================
+.hire {
+   @include adaptiveValue("padding-bottom", 70, 50);
+   // .hire__container
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(35);
+      align-items: center;
+      @media (max-width:$tablet) {
+         grid-template-columns: repeat(1, 1fr);
+         justify-items: center;
+      }
+   }
+   // .hire__image
+   &__image {
+      img {
+         max-width: 100%;
+         transform: translateX(-26%); /* -155/596 */
+         @media (max-width: em(1480)) {
+            transform: translateX(0);
+         }
+      }
+      @media (max-width:$tablet) {
+         margin-bottom: rem(50);
+      }
+   }
+   // .hire__content
+   &__content {
+   }
+   // .hire__text
+   &__text {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 45, 70);
+      }
+   }
+   // .hire__button
+   &__button {
+      @media (max-width:$tablet) {
+         text-align: center;
+      }
+   }
+}
+// ===========================================================
+.programs {
+   @include adaptiveValue("padding-top", 70, 50);
+   @include adaptiveValue("padding-bottom", 70, 50);
+   // .programs__container
+   &__container {
+   }
+   // .programs__header
+   &__header {
+      max-width: rem(700);
+      margin: 0 auto;
+      text-align: center;
+      &:not(:last-child) {
+         margin-bottom: rem(60);
+      }
+   }
+   // .programs__title
+   &__title {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 60, 36);
+      }
+   }
+   // .programs__subtitle
+   &__subtitle {
+      font-size: rem(18);
+      line-height: math.div(21 , 18);
+      letter-spacing: 0.035em;
+   }
+   // .programs__items
+   &__items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: rem(70);
+      row-gap: rem(50);
+   }
+   // .programs__item
+   &__item {
+      flex: 0 0 rem(172);
+      
+   }
+   // .programs__link
+   &__link {
+      display: flex;
+      flex-direction: column;
+      gap: rem(34);
+      height: 100%;
+   }
+   // .programs__icon
+   &__icon-ibg {
+      padding-bottom: 100%;
+      border-radius: rem(32);
+      overflow: hidden;
+      transition: transform 0.5s ease 0s;
+      img {
+         transition: transform 0.5s ease 0s;
+      }
+      @media (any-hover: hover) {
+         &:hover{
+            img {
+               transform: scale(1.03);
+               transition: transform 0.5s ease 0s;
+            }
+         }
+      }
+   }
+   // .programs__label
+   &__label {
+      font-size: rem(24);
+      letter-spacing: 0.035em;
+      text-align: center;
+      flex-grow: 1;
+   }
+}
+// ===========================================================
+.quality {
+   @include adaptiveValue("padding-top", 70, 50);
+   @include adaptiveValue("padding-bottom", 70, 50);
+   // .quality__container
+   &__container {
+      display: grid;
+      grid-template-columns: 1.1fr, 1fr;
+      align-content: center;
+      align-items: center;
+      @media (max-width:$tablet) {
+         grid-template-columns: repeat(1, 1fr);
+         justify-items: center;
+      }
+   }
+   // .quality__header
+   &__header {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 60, 50);
+      }
+   }
+   // .quality__title
+   &__title {
+      text-align: left;
+      @media (max-width:$tablet) {
+         text-align: center;
+      }
+   }
+   // .quality__text
+   &__text {
+      align-self: start;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 45, 70);
+      }
+   }
+   // .quality__button
+   &__button {
+      align-self: start;
+   }
+   // .quality__image
+   &__image {
+      position: relative;
+      z-index: -1;
+      grid-column: 2 / 3;
+      grid-row: 1 / span 3;
+      img {
+         transform: translateX(-7%);
+         max-width: 130%;
+         @media (max-width: em(1170)){
+            transform: translateX(0);
+         }
+         @media (max-width:$tablet) {
+            max-width: 100%;
+         }
+      }
+      @media (max-width:$tablet) {
+         grid-column: 1 / 2;
+         grid-row: 2 / 3;
+         margin-bottom: rem(50);
+      }
+   }
+}
+// ===========================================================
+.contacts {
+   @include adaptiveValue("padding-top", 70, 50);
+   @include adaptiveValue("padding-bottom", 150, 100);
+   position: relative;
+   background: url("@img/contacts/back.png") 50% 60% / 80% 65% no-repeat;
+   @media (max-width: em(1800)) {
+      background: url("@img/contacts/back.png") 50% 60% / 100% 65% no-repeat;
+   }
+   @media (max-width: em(1200)) {
+      background: none;
+   }
+   // .contacts__container
+   &__container {
+      
+   }
+   // .contacts__header
+   &__header {
+   }
+   // .contacts__title
+   &__title {
+      @include adaptiveValue("margin-bottom", 80, 70);
+   }
+   // .contacts__sub-title
+   &__sub-title {
+      font-weight: 900;
+      @include adaptiveValue("font-size", 44, 32);
+      line-height: 1.3;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      &:not(:last-child) {
+         margin-bottom: rem(37);
+      }
+      @media (max-width:$mobile) {
+         display: none;
+      }
+   }
+   // .contacts__body
+   &__body {
+      box-shadow: .125rem .5rem 1.5625rem rgba(0, 0, 0, 0.06);
+      background-color: $backColor;
+      @include adaptiveValue("padding-top", 44, 16);
+      @include adaptiveValue("padding-bottom", 44,16);
+      @include adaptiveValue("padding-left", 30, 16);
+      @include adaptiveValue("padding-right", 30, 16);
+      border-radius: rem(30);
+      display: flex;
+      @include adaptiveValue("column-gap", 100, 20, 0, 1170, 992);
+      justify-content: center;
+      @media (max-width:$tablet) {
+         justify-content: space-between;
+         flex-direction: column-reverse;
+         row-gap: rem(100);
+         align-items: center;
+      }
+      @media (max-width:$mobile) {
+         
+      }
+   }
+   // .contacts__content
+   &__content {
+      position: relative;
+      z-index: 10;
+      @include adaptiveValue("padding-top", 77, 0, 0, 1170, 768);
+      flex: 0 0 26%;
+      @media (max-width: em(1050)) {
+         flex: 0 0 30%;
+      }
+      @media (max-width:$tablet) {
+         flex: 0 0 55%;
+      }
+      @media (max-width: em(450)) {
+         flex: 0 0 100%;
+      }
+   }
+   // .contacts__list
+   &__list {
+   }
+   // .contacts__item
+   &__item {
+      display: flex;
+      align-items: center;
+      column-gap: rem(23);
+      font-size: rem(24);
+      line-height: 1.3;
+      color: $greyColor;
+      white-space: nowrap;
+      transition: all 0.5s ease 0s;
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+      @media (any-hover: hover) {
+         &:hover{
+            transition: all 0.5s ease 0s;
+            color: $orangeColor;
+            .contacts__icon {
+               transform: scale(1.1);
+            }
+         }
+      }
+   }
+   // .contacts__icon
+   &__icon {
+      transition: all 0.5s ease 0s;
+      flex: 0 0 rem(35);
+      height: rem(35);
+      img {
+         max-width: 100%;
+      }
+   }
+   // .contacts__form
+   &__form {
+      position: relative;
+      z-index: 10;
+      flex: 0 0 41%;
+      @media (max-width: em(1050)) {
+         flex: 0 0 50%;
+      }
+      @media (max-width:$tablet) {
+         width: 100%;
+      }
+   }
+   // .contacts__decor
+   &__decor {
+      position: absolute;
+      bottom: 13.50135%; /* 150/1111 */
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+   }
+   .contacts__decor_1,
+   .contacts__decor_2 {
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+      img {
+         max-width: 100%;
+      }
+      @media (max-width: em(450)) {
+         display: none;
+      }
+   }
+   .contacts__decor_1 {
+      width: 16%;
+      height: 50%;
+      left: 11%;
+      @media (max-width: em(1820)) {
+         left: 0;
+      }
+   }
+   .contacts__decor_2 {
+      width: 20%; /* 380/1920 */
+      height: 38%; /* 428/1111 */
+      right: 9%;
+      @media (max-width: em(1820)) {
+         right: 0;
+      }
+   }
+}
+.form-contacts {
+   // .form-contacts__field
+   &__field {
+      & > :not(:last-child) {
+         margin-bottom: rem(25);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+   }
+   // .form-contacts__select
+   &__select {
+   }
+   // .form-contacts__input
+   &__input {
+   }
+   // .form-contacts__textarea
+   &__textarea {
+   }
+   // .form-contacts__button
+   &__button {
+      text-align: center;
+   }
+}
